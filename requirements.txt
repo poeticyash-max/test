@@ -1,0 +1,11 @@
+av
+fastapi
+protobuf
+pydantic
+python-dotenv
+uvicorn
+google-generativeai
+uvicorn
+python-multipart
+pytz
+openai
