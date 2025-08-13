@@ -186,9 +186,9 @@ def extract_medical_data(payload: Transcript):
         {"DiagnosisCode": "00000000", "Diagnosis": "FEVER", "DiagnosisNameCase": "Fever", "Unit": "D"}
     ],
     "to_EXAMINATION": [
-        {"ExaminationCode": "00000000", "Examination": "STOMACH PAIN", "ExaminationNameCase": "Stomach Pain", "Unit": "D"},
-        {"ExaminationCode": "00000000", "Examination": "STOMACH ITCH", "ExaminationNameCase": "Stomach Itch", "Unit": "D"},
-        {"ExaminationCode": "00000000", "Examination": "PAIN", "ExaminationNameCase": "Pain", "Unit": "D"}
+        {"ExaminationCode": "00000000", "Examination": "BLOOD TEST", "ExaminationNameCase": "Blood Test"},
+        {"ExaminationCode": "00000000", "Examination": "URINE TEST", "ExaminationNameCase": "Urine Test"},
+        {"ExaminationCode": "00000000", "Examination": "STOOL SAMPLE TEST", "ExaminationNameCase": "Urine Sample Test"}
     ],
     "to_ALLERGY": [
         {"AllergyCode": "00000000", "Allergy": "POLLEN", "AllergyNameCase": "Pollen", "Unit": "D"},
@@ -242,3 +242,4 @@ All text should be in English, with transliteration and translation as needed.""
         return {"error": "Model did not return valid JSON", "raw_output": content}
 
     return parsed_content
+
