@@ -209,18 +209,9 @@ Extract the data in exactly this JSON schema:
 
 Rules:
 
-Output only valid JSON, no code blocks.
-
-If Complaints is empty but Symptoms is present, copy the symptoms into Complaints.
-
-If a symptom is also a diagnosis, fill both fields.
-
-Normalize capitalization for medicine names, diagnoses, and symptoms.
-
-Where a dosage, frequency, period, or unit can be confidently inferred from medical norms, include it.
-
+Output only valid JSON, no code blocks. If Complaints is empty but Symptoms is present, copy the symptoms into Complaints also do vice versa. If a symptom is also a diagnosis, fill both fields.
+Normalize capitalization for medicine names, diagnoses, and symptoms. Where a dosage, frequency, period, or unit can be confidently inferred from medical norms, include it.
 Leave values empty only if truly not present or inferable from the conversation.
-
 All text should be in English, with transliteration and translation as needed."""
 
     response = client.chat.completions.create(
@@ -242,4 +233,5 @@ All text should be in English, with transliteration and translation as needed.""
         return {"error": "Model did not return valid JSON", "raw_output": content}
 
     return parsed_content
+
 
