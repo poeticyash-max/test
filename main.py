@@ -60,10 +60,10 @@ def extract_medical_data(payload: Transcript):
     global sum
     text = payload.text
 
-    example='''"DoctorID": "00163c3a-06c9-1edf-88aa-376034cb9e31",
-    "HospitalID": "00163c3a-06c9-1edf-9c82-285b1805471a",
-    "ClinicID": "00163c3a-06c9-1edf-bcd4-ca406b3cd433",
-    "UserID": "00163c3a-06c9-1edf-a9f6-b7b7d7dca1ad",
+    example='''"DoctorID": "",
+    "HospitalID": "",
+    "ClinicID": "",
+    "UserID": "",
     "Symptoms": "Fever, Cough, Chest Pain",
     "Complaints": "Mild Pain, Chest Pain",
     "Diagnosis": "Cough, Fever",
@@ -233,5 +233,6 @@ All text should be in English, with transliteration and translation as needed.""
         return {"error": "Model did not return valid JSON", "raw_output": content}
 
     return parsed_content
+
 
 
